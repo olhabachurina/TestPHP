@@ -1,0 +1,70 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #1a2a6c, #1a2a6c 20%, #245dbd 50%, #1a2a6c 80%);
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный светлый фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #333; /* Темный текст для контраста */
+}
+
+h2 {
+    text-align: center;
+    color: #1a2a6c; /* Цвет заголовка для контраста с фоном */
+}
+
+.question {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: #f5f5f5; /* Светлый фон для каждого вопроса */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.question.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.question p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333; /* Цвет текста вопроса */
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    color: #333; /* Цвет текста вариантов ответа */
+}
+
+button {
+    display: none;
+    background-color: #1a2a6c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #245dbd;
+}
